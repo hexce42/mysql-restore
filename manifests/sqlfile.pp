@@ -5,7 +5,7 @@ define mysql-restore::sqlfile (
 	$workdir ='',
 	$sourcehost = '',
 	$sshuser = '',
-	$sshport = '',
+	$sshport = '22',
 	$restoreuser = '',
 	$restorepasswd = '',
 	$compressed = '',
