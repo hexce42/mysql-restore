@@ -4,8 +4,8 @@
 Puppet module for sql file restore on mysql server, it can restore a local or remote(via ssh) file either compressed or non-compressed.
 
 ##Provides
-*`mysql-restore::sqlfile` resource for sql file restore
-*`mysql_integrity` custom fact for tablespace integrity check
+* `mysql-restore::sqlfile` resource for sql file restore
+* `mysql_integrity` custom fact for tablespace integrity check
 
 ### mysql-restore::sqlfile
 
@@ -15,9 +15,9 @@ In case of local file, the resource check if a hash of the file is already store
 In case of remote file the process is similar, logs into the remote host through ssh with the given user (public key autenticatin should be set up), check the file based on hash, and if no match downloads it to the work directory for restore. 
 
 
-#### Parameters
+### `mysql-restore::sqlfile`
 
-##### `mysql-restore::sqlfile`
+#### Parameters
 
 ##### `filename`
 The relative filename of the file to be restored. Defaults to the name of the resource.
@@ -41,7 +41,7 @@ User on the source host with access to the sql file.
 SSH port number, default 22.
 
 ##### `restoreuser` , `restorepassword`
-Username and password for the Mysql user to apply restores, in case of full server restore usually the.
+Username and password for the Mysql user to apply restores, in case of full server restore usually the root user.
 
 ##### `compressed`
 Define if the sql file is compressed. Possible values are 'bzip','gzip','none'. Default is 'none'. 
