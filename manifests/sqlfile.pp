@@ -1,5 +1,5 @@
 define mysql-restore::sqlfile (
-	$filename = '', # 
+	$filename = '',  
 	$filepath='',
 	$remotehost = '',
 	$workdir ='',
